@@ -8,7 +8,7 @@
     tools:context=".Areas">
 
     <TextView
-        android:id="@+id/lblAreas"
+        android:id="@+id/lblTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -17,6 +17,7 @@
         android:textStyle="bold" />
 
     <ListView
+        android:id="@+id/lstAreas"
         android:layout_width="409dp"
         android:layout_height="704dp" />
 </LinearLayout>
