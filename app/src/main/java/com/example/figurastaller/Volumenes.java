@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 public class Volumenes extends AppCompatActivity {
     private ListView lista_volumen;
-    private String[] figuras;
+    private String[] figurasSolidas;
     private ArrayAdapter<String> adapter_Volumen;
     private Intent intent;
 
@@ -21,8 +21,8 @@ public class Volumenes extends AppCompatActivity {
         setContentView(R.layout.activity_volumenes);
 
         lista_volumen=findViewById(R.id.lstVolumenes);
-        figuras=getResources().getStringArray(R.array.opciones);
-        adapter_Volumen=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, figuras);
+        figurasSolidas=getResources().getStringArray(R.array.figurasSolidas);
+        adapter_Volumen=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, figurasSolidas);
         lista_volumen.setAdapter(adapter_Volumen);
         lista_volumen.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -27,4 +27,24 @@
     <string name="cilindro">Cilindro</string>
     <string name="cono">Cono</string>
     <string name="cubo">Cubo</string>
+
+    <string-array name="opciones">
+        <item>@string/areas</item>
+        <item>@string/volumen</item>
+        <item>@string/operacionesrealizadas</item>
+    </string-array>
+
+    <string-array name="figurasPlanas">
+        <item>@string/cuadrado</item>
+        <item>@string/rectangulo</item>
+        <item>@string/triangulo</item>
+        <item>@string/circulo</item>
+    </string-array>
+
+    <string-array name="figurasSolidas">
+        <item>@string/esfera</item>
+        <item>@string/cilindro</item>
+        <item>@string/cono</item>
+        <item>@string/cubo</item>
+    </string-array>
 </resources>

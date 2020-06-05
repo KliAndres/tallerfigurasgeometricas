@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Areas extends AppCompatActivity {
     private ListView lista_figuras;
-    private String[] figuras;
+    private String[] figurasPlanas;
     private ArrayAdapter<String> adapter_areas;
     private Intent intent;
 
@@ -23,8 +23,8 @@ public class Areas extends AppCompatActivity {
         setContentView(R.layout.activity_areas);
 
         lista_figuras=findViewById(R.id.lstAreas);
-        figuras= getResources().getStringArray(R.array.opciones);
-        adapter_areas=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, figuras);
+        figurasPlanas= getResources().getStringArray(R.array.figurasPlanas);
+        adapter_areas=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, figurasPlanas);
         lista_figuras.setAdapter(adapter_areas);
         lista_figuras.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
