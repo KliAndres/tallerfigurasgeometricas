@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">FigurasTaller</string>
+    <string name="title_activity_areas">areas</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="opciones">OPCIONES</string>
+    <string name="areas">Areas</string>
+    <string name="volumen">Volúmenes</string>
+    <string name="operacionesrealizadas">Operaciones Realizadas</string>
+    <string name="cuadrado">Cuadrado</string>
+    <string name="ingreselado">Ingrese el valor del lado</string>
+    <string name="calcular">Calcular</string>
+    <string name="limpiar">Borrar</string>
+    <string name="rectangulo">Rectangulo</string>
+    <string name="base">Ingrese la base</string>
+    <string name="altura">Ingrese la altura</string>
+    <string name="triangulo">Triángulo</string>
+    <string name="circulo">Circulo</string>
+    <string name="radio">Ingrese el radio</string>
+    <string name="esfera">Esfera</string>
+    <string name="cilindro">Cilindro</string>
+    <string name="cono">Cono</string>
+    <string name="cubo">Cubo</string>
 </resources>
