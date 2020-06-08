@@ -39,7 +39,7 @@ public class Cuadrado extends AppCompatActivity {
         String error_lado;
         int i=0;
 
-        error_lado = getString(R.string.error_lado_cuadrado);
+        error_lado = getString(R.string.error_lado);
 
         if(lado.getText().toString().isEmpty()){
             lado.setError(error_lado);

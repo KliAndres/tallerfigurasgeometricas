@@ -18,15 +18,15 @@ public class Circulo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_circulo);
 
-        radio = findViewById(R.id.txtRadio);
+        radio = findViewById(R.id.txtLado);
         resultado = findViewById(R.id.lblResultado);
     }
     public void calcular(View v){
-        double rad, res=0;
+        double rad, res=0, pi=3.1415;
         if (validar()) {
             rad = parseDouble(radio.getText().toString());
 
-            res = 2 * (3.1416) * rad * rad;
+            res = 2 * pi * rad * rad;
         }
         resultado.setText(""+res);
     }
@@ -38,7 +38,7 @@ public class Circulo extends AppCompatActivity {
         String error_radio;
         int i=0;
 
-        error_radio = "Error, debe ingresar el radio";
+        error_radio = getString(R.string.error_radio);
 
         if(radio.getText().toString().isEmpty()){
             radio.setError(error_radio);

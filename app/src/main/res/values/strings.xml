@@ -28,10 +28,11 @@
     <string name="cono">Cono</string>
     <string name="cubo">Cubo</string>
     <string name="resultado">Resultado</string>
-    <string name="error_lado_cuadrado">Error, debe ingresar el lado del cuadrado</string>
+    <string name="error_lado">Error, debe ingresar el lado</string>
     <string name="error_coma">Error, no puede ingresar coma</string>
     <string name="error_altura">Error, Digite la altura</string>
     <string name="error_base">Error, Digite la base</string>
+    <string name="error_radio">Error, debe ingresar el radio</string>
 
     <string-array name="opciones">
         <item>@string/areas</item>
