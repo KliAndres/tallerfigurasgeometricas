@@ -27,6 +27,11 @@
     <string name="cilindro">Cilindro</string>
     <string name="cono">Cono</string>
     <string name="cubo">Cubo</string>
+    <string name="resultado">Resultado</string>
+    <string name="error_lado_cuadrado">Error, debe ingresar el lado del cuadrado</string>
+    <string name="error_coma">Error, no puede ingresar coma</string>
+    <string name="error_altura">Error, Digite la altura</string>
+    <string name="error_base">Error, Digite la base</string>
 
     <string-array name="opciones">
         <item>@string/areas</item>
