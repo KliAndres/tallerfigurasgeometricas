@@ -1,7 +1,9 @@
 package com.example.figurastaller;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -11,7 +13,6 @@ import static java.lang.Double.parseDouble;
 
 public class Cubo extends AppCompatActivity {
     private EditText lado;
-    private TextView resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,20 +20,10 @@ public class Cubo extends AppCompatActivity {
         setContentView(R.layout.activity_cubo);
 
         lado = findViewById(R.id.txtLado);
-        resultado = findViewById(R.id.lblResultado);
     }
-    public void calcular(View v){
-        double ladoCub, res=0;
-        if (validar()) {
-            ladoCub = parseDouble(lado.getText().toString());
 
-            res = ladoCub * ladoCub * ladoCub;
-        }
-        resultado.setText(""+res);
-    }
     public void limpiar(View v){
         lado.setText("");
-        resultado.setText("");
     }
     public boolean validar(){
         String error_lado;
@@ -46,6 +37,30 @@ public class Cubo extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+    public void showResult(final View v){
+        String Perfecto;
+        double ladoCub, res=0;
+        if (validar()) {
+            ladoCub = parseDouble(lado.getText().toString());
+
+            res = ladoCub * ladoCub * ladoCub;
+        }
+        //resultado.setText(""+res);
+        AlertDialog.Builder builder =new AlertDialog.Builder(this);
+        builder.setTitle(R.string.show_resultado);
+        builder.setMessage(getString(R.string.result_volumen)+"  "+ res +" "+getString(R.string.centimentroscub));
+        Perfecto=getString(R.string.opcion_listo);
+
+        builder.setPositiveButton(Perfecto, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                limpiar(v);
+                onBackPressed();
+            }
+        });
+        AlertDialog dialog =builder.create();
+        dialog.show();
     }
 
 }

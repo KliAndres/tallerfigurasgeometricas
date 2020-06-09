@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="calcular"
+            android:onClick="showResult"
             android:text="@string/calcular" />
 
         <Button
@@ -46,8 +46,4 @@
             android:text="@string/limpiar" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/lblResultado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 </LinearLayout>

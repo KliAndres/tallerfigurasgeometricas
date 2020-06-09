@@ -6,7 +6,6 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="opciones">OPCIONES</string>
@@ -33,6 +32,12 @@
     <string name="error_altura">Error, Digite la altura</string>
     <string name="error_base">Error, Digite la base</string>
     <string name="error_radio">Error, debe ingresar el radio</string>
+    <string name="show_resultado">Resultado</string>
+    <string name="opcion_listo">Listo!</string>
+    <string name="result_area"> El área es: </string>
+    <string name="centimentros">   cm^2</string>
+    <string name="result_volumen"> El volumen es: </string>
+    <string name="centimentroscub">   cm^3</string>
 
     <string-array name="opciones">
         <item>@string/areas</item>

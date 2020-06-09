@@ -1,7 +1,9 @@
 package com.example.figurastaller;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -11,7 +13,6 @@ import static java.lang.Double.parseDouble;
 
 public class Cilindro extends AppCompatActivity {
     public EditText radio, altura;
-    public TextView resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,21 +21,11 @@ public class Cilindro extends AppCompatActivity {
 
         radio = findViewById(R.id.txtLado);
         altura = findViewById(R.id.txtAltura);
-        resultado = findViewById(R.id.lblResultado);
     }
-    public void calcular(View v){
-        double Alt, rad, res=0, pi=3.1415;
-        if (validar()) {
-            Alt = parseDouble(altura.getText().toString());
-            rad = parseDouble(radio.getText().toString());
-            res = pi * rad * rad * Alt;
-        }
-        resultado.setText(""+res);
-    }
+
     public void limpiar(View v){
         altura.setText("");
         radio.setText("");
-        resultado.setText("");
     }
     public boolean validar(){
         String error_altura, error_radio;
@@ -52,6 +43,30 @@ public class Cilindro extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+    public void showResult(final View v){
+        String Perfecto;
+        double Alt, rad, res=0, pi=3.1415;
+        if (validar()) {
+            Alt = parseDouble(altura.getText().toString());
+            rad = parseDouble(radio.getText().toString());
+            res = pi * rad * rad * Alt;
+        }
+        //resultado.setText(""+res);
+        AlertDialog.Builder builder =new AlertDialog.Builder(this);
+        builder.setTitle(R.string.show_resultado);
+        builder.setMessage(getString(R.string.result_volumen)+"  "+ res +" "+getString(R.string.centimentroscub));
+        Perfecto=getString(R.string.opcion_listo);
+
+        builder.setPositiveButton(Perfecto, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                limpiar(v);
+                onBackPressed();
+            }
+        });
+        AlertDialog dialog =builder.create();
+        dialog.show();
     }
 
 }
