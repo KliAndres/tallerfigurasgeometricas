@@ -38,6 +38,9 @@
     <string name="centimentros">   cm^2</string>
     <string name="result_volumen"> El volumen es: </string>
     <string name="centimentroscub">   cm^3</string>
+    <string name="numero">No.</string>
+    <string name="operacion">Operación</string>
+    <string name="datos">Datos</string>
 
     <string-array name="opciones">
         <item>@string/areas</item>
