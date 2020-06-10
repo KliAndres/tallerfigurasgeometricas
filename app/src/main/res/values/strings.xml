@@ -41,6 +41,7 @@
     <string name="numero">No.</string>
     <string name="operacion">Operación</string>
     <string name="datos">Datos</string>
+    <string name="nombreop">Area Cuadrado</string>
 
     <string-array name="opciones">
         <item>@string/areas</item>

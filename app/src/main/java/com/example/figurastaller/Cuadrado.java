@@ -39,15 +39,18 @@ public class Cuadrado extends AppCompatActivity {
     return true;
     }
     public void showResult(final View v){
-        String Perfecto;
+        String nombreop, Perfecto;
         double ladoRec, res = 0;
+
+        nombreop=getString(R.string.nombreop);
 
         if (validar()) {
             ladoRec = parseDouble(lado.getText().toString());
-
+            Figura figura =new Figura(nombreop, ladoRec, res);
             res = ladoRec * ladoRec;
         }
         //resultado.setText(""+res);
+
         AlertDialog.Builder builder =new AlertDialog.Builder(this);
         builder.setTitle(R.string.show_resultado);
         builder.setMessage(getString(R.string.result_area)+"  "+ res +" "+getString(R.string.centimentros));

@@ -49,6 +49,5 @@ public class Areas extends AppCompatActivity {
                 }
             }
         });
-
     }
 }
