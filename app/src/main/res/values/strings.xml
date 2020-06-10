@@ -79,4 +79,5 @@
     <string name="error_altura">Error, Digite la altura</string>
     <string name="error_base">Error, Digite la base</string>
     <string name="error_radio">Error, debe ingresar el radio</string>
+    <string name="entrar">Iniciar</string>
 </resources>
