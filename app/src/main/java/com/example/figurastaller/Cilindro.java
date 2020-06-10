@@ -45,12 +45,20 @@ public class Cilindro extends AppCompatActivity {
         return true;
     }
     public void showResult(final View v){
-        String Perfecto;
+        String Perfecto, nombreopCil;
         double Alt, rad, res=0, pi=3.1415;
+
+        nombreopCil=getString(R.string.nombreopcil);
         if (validar()) {
             Alt = parseDouble(altura.getText().toString());
             rad = parseDouble(radio.getText().toString());
             res = pi * rad * rad * Alt;
+
+            String str_alt = String.valueOf(Alt);
+            String str_rad=String.valueOf(rad);
+            String str_resu = String.valueOf(res);
+            Figura figura =new Figura(nombreopCil, getString(R.string.alturatext) +" "+str_alt+getString(R.string.radiotext)+" "+str_rad, str_resu+" "+getString(R.string.centimentroscub));
+            figura.guardar();
         }
         //resultado.setText(""+res);
         AlertDialog.Builder builder =new AlertDialog.Builder(this);

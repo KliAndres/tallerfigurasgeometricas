@@ -39,12 +39,20 @@ public class Cubo extends AppCompatActivity {
         return true;
     }
     public void showResult(final View v){
-        String Perfecto;
+        String Perfecto,nombreopCubo;
         double ladoCub, res=0;
+
+
+        nombreopCubo=getString(R.string.nombreopcubo);
         if (validar()) {
             ladoCub = parseDouble(lado.getText().toString());
 
             res = ladoCub * ladoCub * ladoCub;
+
+            String str_lado = String.valueOf(ladoCub);
+            String str_resu = String.valueOf(res);
+            Figura figura =new Figura(nombreopCubo, getString(R.string.radiotext)+" "+ str_lado, str_resu+" "+getString(R.string.centimentroscub));
+            figura.guardar();
         }
         //resultado.setText(""+res);
         AlertDialog.Builder builder =new AlertDialog.Builder(this);

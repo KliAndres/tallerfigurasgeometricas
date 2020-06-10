@@ -39,12 +39,19 @@ public class Circulo extends AppCompatActivity {
         return true;
     }
     public void showResult(final View v){
-        String Perfecto;
+        String Perfecto,nombreopCirc;
         double rad, res=0, pi=3.1415;
+
+        nombreopCirc=getString(R.string.nombreopcir);
         if (validar()) {
             rad = parseDouble(radio.getText().toString());
 
             res = 2 * pi * rad * rad;
+
+            String str_rad = String.valueOf(rad);
+            String str_resu = String.valueOf(res);
+            Figura figura =new Figura(nombreopCirc, getString(R.string.radiotext)+" " + str_rad, str_resu+" "+getString(R.string.centimentros));
+            figura.guardar();
         }
         //resultado.setText(""+res);
         AlertDialog.Builder builder =new AlertDialog.Builder(this);

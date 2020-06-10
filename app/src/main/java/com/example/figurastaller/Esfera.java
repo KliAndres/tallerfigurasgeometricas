@@ -41,12 +41,19 @@ public class Esfera extends AppCompatActivity {
     }
 
     public void showResult(final View v){
-        String Perfecto;
+        String Perfecto, nombreopesf;
         double rad, res=0, pi=3.1415;
+
+        nombreopesf=getString(R.string.nomopEsf);
         if (validar()) {
             rad = parseDouble(radio.getText().toString());
 
             res = (4/3) * pi * rad * rad * rad;
+
+                String str_rad = String.valueOf(rad);
+                String str_resu = String.valueOf(res);
+                Figura figura =new Figura(nombreopesf,getString(R.string.radiotext)+" "+str_rad, str_resu+" "+getString(R.string.centimentroscub));
+                figura.guardar();
         }
         //resultado.setText(""+res);
         AlertDialog.Builder builder =new AlertDialog.Builder(this);

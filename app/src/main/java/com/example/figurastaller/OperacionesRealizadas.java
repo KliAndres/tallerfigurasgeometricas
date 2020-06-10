@@ -37,6 +37,8 @@ public class OperacionesRealizadas extends AppCompatActivity {
             fila.addView(columna_dos);
             fila.addView(columna_tres);
             fila.addView(columna_cuatro);
+
+            tabla.addView(fila);
         }
     }
 }

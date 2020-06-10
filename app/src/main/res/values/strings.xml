@@ -27,11 +27,7 @@
     <string name="cono">Cono</string>
     <string name="cubo">Cubo</string>
     <string name="resultado">Resultado</string>
-    <string name="error_lado">Error, debe ingresar el lado</string>
-    <string name="error_coma">Error, no puede ingresar coma</string>
-    <string name="error_altura">Error, Digite la altura</string>
-    <string name="error_base">Error, Digite la base</string>
-    <string name="error_radio">Error, debe ingresar el radio</string>
+
     <string name="show_resultado">Resultado</string>
     <string name="opcion_listo">Listo!</string>
     <string name="result_area"> El área es: </string>
@@ -41,7 +37,22 @@
     <string name="numero">No.</string>
     <string name="operacion">Operación</string>
     <string name="datos">Datos</string>
+
+    <string name="alturatext">Altura:</string>
+    <string name="basetext">Base:</string>
+    <string name="radiotext">Radio:</string>
+    <string name="ladotext">Lado:</string>
+
     <string name="nombreop">Area Cuadrado</string>
+    <string name="nombreopRect">Área Rectangulo</string>
+    <string name="nombreopTrian">Área del Triangulo</string>
+    <string name="nombreopcir">Área del Circulo</string>
+
+    <string name="nombreopcubo">Volúmen del Cubo</string>
+    <string name="nombreopcono">Volúmen del Cono</string>
+    <string name="nombreopcil">Volúmen del Cilindro</string>
+    <string name="nomopEsf">Volúmen de la Esfera</string>
+
 
     <string-array name="opciones">
         <item>@string/areas</item>
@@ -62,4 +73,10 @@
         <item>@string/cono</item>
         <item>@string/cubo</item>
     </string-array>
+
+    <string name="error_lado">Error, debe ingresar el lado</string>
+    <string name="error_coma">Error, no puede ingresar coma</string>
+    <string name="error_altura">Error, Digite la altura</string>
+    <string name="error_base">Error, Digite la base</string>
+    <string name="error_radio">Error, debe ingresar el radio</string>
 </resources>

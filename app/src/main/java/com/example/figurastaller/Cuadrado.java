@@ -46,8 +46,12 @@ public class Cuadrado extends AppCompatActivity {
 
         if (validar()) {
             ladoRec = parseDouble(lado.getText().toString());
-            Figura figura =new Figura(nombreop, ladoRec, res);
             res = ladoRec * ladoRec;
+
+            String str_lado = String.valueOf(ladoRec);
+            String str_resu = String.valueOf(res);
+            Figura figura =new Figura(nombreop, getString(R.string.ladotext)+" "+str_lado, str_resu+" "+getString(R.string.centimentros));
+            figura.guardar();
         }
         //resultado.setText(""+res);
 

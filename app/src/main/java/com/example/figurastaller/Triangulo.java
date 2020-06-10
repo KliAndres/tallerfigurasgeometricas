@@ -47,13 +47,21 @@ public class Triangulo extends AppCompatActivity {
     }
 
     public void showResult(final View v) {
-        String Perfecto;
+        String Perfecto, nombreopTrian;
         double Alt, bas, res = 0;
+
+        nombreopTrian=getString(R.string.nombreopTrian);
         if (validar()) {
             Alt = parseDouble(altura.getText().toString());
             bas = parseDouble(base.getText().toString());
 
             res = (Alt * bas) / 2;
+
+            String str_alt = String.valueOf(Alt);
+            String str_bas=String.valueOf(bas);
+            String str_resu = String.valueOf(res);
+            Figura figura =new Figura(nombreopTrian, getString(R.string.alturatext) +" "+str_alt+getString(R.string.basetext)+" "+str_bas, str_resu+" "+getString(R.string.centimentros));
+            figura.guardar();
         }
             //resultado.setText(""+res);
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
