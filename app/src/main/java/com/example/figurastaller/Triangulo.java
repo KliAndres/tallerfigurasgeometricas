@@ -58,11 +58,11 @@ public class Triangulo extends AppCompatActivity {
             res = (Alt * bas) / 2;
 
             String str_alt = String.valueOf(Alt);
-            String str_bas=String.valueOf(bas);
+            String str_bas = String.valueOf(bas);
             String str_resu = String.valueOf(res);
-            Figura figura =new Figura(nombreopTrian, getString(R.string.alturatext) +" "+str_alt+getString(R.string.basetext)+" "+str_bas, str_resu+" "+getString(R.string.centimentros));
+            Figura figura = new Figura(nombreopTrian, getString(R.string.alturatext) + " " + str_alt + getString(R.string.basetext) + " " + str_bas, str_resu + " " + getString(R.string.centimentros));
             figura.guardar();
-        }
+
             //resultado.setText(""+res);
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle(R.string.show_resultado);
@@ -78,6 +78,6 @@ public class Triangulo extends AppCompatActivity {
             });
             AlertDialog dialog = builder.create();
             dialog.show();
-
+        }
     }
 }

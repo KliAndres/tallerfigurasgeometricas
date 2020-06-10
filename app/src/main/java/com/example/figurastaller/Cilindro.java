@@ -55,26 +55,27 @@ public class Cilindro extends AppCompatActivity {
             res = pi * rad * rad * Alt;
 
             String str_alt = String.valueOf(Alt);
-            String str_rad=String.valueOf(rad);
+            String str_rad = String.valueOf(rad);
             String str_resu = String.valueOf(res);
-            Figura figura =new Figura(nombreopCil, getString(R.string.alturatext) +" "+str_alt+getString(R.string.radiotext)+" "+str_rad, str_resu+" "+getString(R.string.centimentroscub));
+            Figura figura = new Figura(nombreopCil, getString(R.string.alturatext) + " " + str_alt + getString(R.string.radiotext) + " " + str_rad, str_resu + " " + getString(R.string.centimentroscub));
             figura.guardar();
-        }
-        //resultado.setText(""+res);
-        AlertDialog.Builder builder =new AlertDialog.Builder(this);
-        builder.setTitle(R.string.show_resultado);
-        builder.setMessage(getString(R.string.result_volumen)+"  "+ res +" "+getString(R.string.centimentroscub));
-        Perfecto=getString(R.string.opcion_listo);
 
-        builder.setPositiveButton(Perfecto, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                limpiar(v);
-                onBackPressed();
-            }
-        });
-        AlertDialog dialog =builder.create();
-        dialog.show();
+            //resultado.setText(""+res);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(R.string.show_resultado);
+            builder.setMessage(getString(R.string.result_volumen) + "  " + res + " " + getString(R.string.centimentroscub));
+            Perfecto = getString(R.string.opcion_listo);
+
+            builder.setPositiveButton(Perfecto, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    limpiar(v);
+                    onBackPressed();
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
     }
 
 }
